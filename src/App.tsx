@@ -4,14 +4,14 @@ function CounterList() {
   const [counters, setCounters] = useState(Array(96).fill(0));
 
   // Function to handle incrementing a counter
-  const handleIncrement = (index) => {
+  const handleIncrement = (index:any) => {
     const newCounters = [...counters];
     newCounters[index] += 1;
     setCounters(newCounters);
   };
 
   // Function to format time based on index
-  const formatTime = (index) => {
+  const formatTime = (index:any) => {
     const hours = Math.floor(index * 15 / 60);
     const minutes = (index * 15) % 60;
     return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
